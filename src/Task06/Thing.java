@@ -32,7 +32,7 @@ public class Thing {
         }
 
         System.out.println("\nGenerated " + generatedThingsList.size() +
-                " things with the following characteristics:");
+                            " things with the following characteristics:");
 
         for (int i = 0; i < generatedThingsList.size(); i++) {
             int weight = generatedThingsList.get(i).getWeight();
