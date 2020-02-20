@@ -33,6 +33,7 @@ public class Solution {
             for (int output : list) {
                 System.out.print(output + " ");
             }
+
         } catch (InputMismatchException e) {
             System.out.println("Oops! You entered an incorrect value. " +
                                 "The sequence length is outside the range from 0 to 100.");
