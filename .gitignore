@@ -1,0 +1,13 @@
+# Project exclude paths
+/out/
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+hs_err_pid*
+
+*.iml
+.idea/*
