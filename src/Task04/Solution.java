@@ -14,9 +14,8 @@ public class Solution {
     public static void main(String[] args) {
         String msgError = null;
 
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
         try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Input the text:");
             String str = bufferedReader.readLine();
             if (str.equals("")) {

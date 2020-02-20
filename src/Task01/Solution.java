@@ -33,6 +33,7 @@ public class Solution {
 
     public static String primeOrComposite(int num) {
         String result = "prime";
+        num = Math.abs(num);
 
         for (int i = 2; i <= num / 2; i++) {
             if (num % i == 0) {

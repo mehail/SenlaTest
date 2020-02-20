@@ -15,9 +15,8 @@ import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
         try {
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Input the sentence:");
             String str = bufferedReader.readLine();
             str = str.replaceAll("\\s{2,}", " ");
