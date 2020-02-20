@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         try {
             System.out.print("Input the carrying capacity of the knapsack: ");
             int carrying = scanner.nextInt();
