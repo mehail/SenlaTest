@@ -5,7 +5,7 @@
  * Если пользователь некорректно введёт хотя бы одно из чисел, то сообщать об ошибке.
  */
 
-package Task02;
+package task02;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

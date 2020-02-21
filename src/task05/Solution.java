@@ -4,7 +4,7 @@
  * Длина последовательности N вводится вручную и не должна превышать 100.
  */
 
-package Task05;
+package task05;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

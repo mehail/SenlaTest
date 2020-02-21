@@ -6,7 +6,7 @@
  * Предложение вводится вручную. (Разделитель пробел (“ ”)).
  */
 
-package Task03;
+package task03;
 
 import java.io.BufferedReader;
 import java.io.IOException;

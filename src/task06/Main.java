@@ -6,7 +6,7 @@
  * максимизировать суммарную ценность груза.
  */
 
-package Task06;
+package task06;
 
 import java.util.InputMismatchException;
 import java.util.List;

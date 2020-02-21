@@ -4,7 +4,7 @@
  * Текст и слово вводится вручную.
  */
 
-package Task04;
+package task04;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

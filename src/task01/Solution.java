@@ -4,7 +4,7 @@
  * Если пользователь введёт не целое число, то сообщать ему об ошибке.
  */
 
-package Task01;
+package task01;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
