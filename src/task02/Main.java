@@ -10,7 +10,7 @@ package task02;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Solution {
+public class Main {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)){
