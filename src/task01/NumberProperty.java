@@ -1,6 +1,7 @@
 package task01;
 
 public enum NumberProperty {
+
     EVEN("even"),
     ODD("odd"),
     PRIME("prime"),
@@ -15,4 +16,5 @@ public enum NumberProperty {
     public String getTitle() {
         return title;
     }
+
 }
