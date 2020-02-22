@@ -10,37 +10,22 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Input a number: ");
 
-        try {
-            int num = scanner.nextInt();
-            System.out.println("Your number: " + num + " is " + evenOrOdd(num) + " and " + primeOrComposite(num));
+    public static void main(String[] args) {
+        try (final Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Input a number: ");
+            final int input = scanner.nextInt();
+
+            final NumberProperty evenOrOdd = NumberUtils.evenOrOdd(input);
+            final NumberProperty primeOrComposite = NumberUtils.primeOrComposite(input);
+
+            final String output = String.format("Your number: %d is %s and %s", input, evenOrOdd.getTitle(),
+                    primeOrComposite.getTitle());
+
+            System.out.println(output);
         } catch (InputMismatchException e) {
             System.out.println("Oops! You entered an incorrect value.");
         }
-
-        scanner.close();
     }
 
-    public static String evenOrOdd(int num) {
-        if (num % 2 == 0)
-            return "even";
-        else
-            return "odd";
-    }
-
-    public static String primeOrComposite(int num) {
-        String result = "prime";
-        num = Math.abs(num);
-
-        for (int i = 2; i <= num / 2; i++) {
-            if (num % i == 0) {
-                result = "composite";
-                break;
-            }
-        }
-        return result;
-    }
 }
