@@ -45,7 +45,6 @@ public class Knapsack {
         }
 
         int result = matrix[numberThings][knapsackCarrying];
-        //System.out.println("\nThe backpack is packed with things with a total cost: " + result);
 
         for (int i = numberThings; i > 0 && result > 0; i--) {
             int w = knapsackCarrying;
@@ -53,14 +52,6 @@ public class Knapsack {
                 result = result - costs[i - 1];
                 w -= weights[i - 1];
                 packerList.add(things.get(i));
-                /**
-                System.out.println("Thing #" +
-                        i +
-                        " with a weight of " +
-                        weights[i - 1] +
-                        " and a coast of " +
-                        costs[i - 1]);
-                */
             }
         }
 

@@ -11,14 +11,14 @@ public class Main {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("Input the carrying capacity of the knapsack from 1 to 100: ");
-            int knapsackCarrying = scanner.nextInt();
+            final int knapsackCarrying = scanner.nextInt();
 
             if (knapsackCarrying <= 0 || knapsackCarrying >= 100) {
                 throw new InputMismatchException();
             }
 
             System.out.print("Input the number of things to generate from 1 to 1000: ");
-            int numberThings = scanner.nextInt();
+            final int numberThings = scanner.nextInt();
 
             if (numberThings <= 0 || numberThings >= 1000) {
                 throw new InputMismatchException();
