@@ -4,44 +4,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Knapsack {
-    private int carrying;
-    private List<Thing> thingList;
+    private final int knapsackCarrying;
+    private List<Thing> packerList;
 
-    public int getCarrying() {
-        return carrying;
+    public Knapsack(int knapsackCarrying) {
+        this.knapsackCarrying = knapsackCarrying;
+        this.packerList = new ArrayList<>();
     }
 
-    public void setCarrying(int carrying) {
-        this.carrying = carrying;
+    public int getKnapsackCarrying() {
+        return knapsackCarrying;
     }
 
-    public List<Thing> getThingList() {
-        return thingList;
+    public List<Thing> getPackerList() {
+        return packerList;
     }
 
-    public void setThingList(List<Thing> thingList) {
-        this.thingList = thingList;
-    }
-
-    public Knapsack(int carrying) {
-        this.carrying = carrying;
-        this.thingList = new ArrayList<>();
-    }
-
-    public void packer(List<Thing> generatedThingsList) {
-        int numberThings = generatedThingsList.size();
+    public List<Thing> packer(List<Thing> things) {
+        List<Thing> packerList = new ArrayList<>();
+        int numberThings = things.size();
         int[] weights = new int[numberThings];
         int[] costs = new int[numberThings];
 
-        for (int i = 0; i < generatedThingsList.size(); i++) {
-            weights[i] = generatedThingsList.get(i).getWeight();
-            costs[i] = generatedThingsList.get(i).getCost();
+        for (int i = 0; i < things.size(); i++) {
+            weights[i] = things.get(i).getWeight();
+            costs[i] = things.get(i).getCost();
         }
 
-        int[][] matrix = new int[numberThings + 1][carrying + 1];
+        int[][] matrix = new int[numberThings + 1][knapsackCarrying + 1];
 
         for (int i = 0; i <= numberThings; i++) {
-            for (int j = 0; j <= carrying; j++) {
+            for (int j = 0; j <= knapsackCarrying; j++) {
                 if (i == 0 || j == 0)
                     matrix[i][j] = 0;
                 else if (weights[i - 1] <= j)
@@ -51,21 +44,37 @@ public class Knapsack {
             }
         }
 
-        int result = matrix[numberThings][carrying];
-        System.out.println("\nThe backpack is packed with things with a total cost: " + result);
+        int result = matrix[numberThings][knapsackCarrying];
+        //System.out.println("\nThe backpack is packed with things with a total cost: " + result);
 
         for (int i = numberThings; i > 0 && result > 0; i--) {
-            int w = carrying;
+            int w = knapsackCarrying;
             if (result != matrix[i - 1][w]) {
                 result = result - costs[i - 1];
                 w -= weights[i - 1];
+                packerList.add(things.get(i));
+                /**
                 System.out.println("Thing #" +
                         i +
                         " with a weight of " +
                         weights[i - 1] +
                         " and a coast of " +
                         costs[i - 1]);
+                */
             }
         }
+
+        return packerList;
     }
+
+    public int sumCost(List<Thing> packerList) {
+        int sum = 0;
+        for (Thing thing : packerList
+                ) {
+            sum += thing.getCost();
+        }
+
+        return sum;
+    }
+
 }
