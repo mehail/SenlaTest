@@ -30,11 +30,10 @@ public class Main {
                     .collect(Collectors.toList());
 
             System.out.println("\nGenerated %d things with the following characteristics: " + things.size());
-
             Thing.printList(things);
 
             final Knapsack knapsack = new Knapsack(knapsackCarrying);
-            List<Thing> packerList = knapsack.packer(things);
+            final List<Thing> packerList = knapsack.packer(things);
             int sumCost = knapsack.sumCost(packerList);
 
             System.out.println("\nThe backpack is packed with things with a total cost: " + sumCost);
