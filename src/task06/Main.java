@@ -29,7 +29,7 @@ public class Main {
                     .limit(numberThings)
                     .collect(Collectors.toList());
 
-            System.out.println("\nGenerated %d things with the following characteristics: " + things.size());
+            System.out.println("\nGenerated things with the following characteristics: " + things.size());
             Thing.printList(things);
 
             final Knapsack knapsack = new Knapsack(knapsackCarrying);
