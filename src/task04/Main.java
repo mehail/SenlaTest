@@ -38,6 +38,7 @@ public class Main {
 
             final String output = String.format("The word \"%s\" is repeated %d times in the text.", word, count);
             System.out.println(output);
+
         } catch (InputMismatchException e){
             System.out.println(e.getMessage());
         }

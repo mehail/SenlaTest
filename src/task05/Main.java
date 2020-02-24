@@ -32,6 +32,7 @@ public class Main {
             final String output = String.format("Palindrome numbers in the sequence from 0 to %d: %s", number,
                     list.toString().replaceAll("\\[|\\]", ""));
             System.out.println(output);
+
         } catch (InputMismatchException e) {
             if (e.getMessage() == null)
                 System.out.println("Oops! You entered an incorrect value.");

@@ -1,3 +1,11 @@
+/**
+ * Имеется набор вещей, которые необходимо поместить в рюкзак.
+ * Рюкзак обладает заданной грузоподъемностью.
+ * Вещи в свою очередь обладают двумя параметрами — весом и стоимостью.
+ * Цель задачи заполнить рюкзак не превысив его грузоподъемность и
+ * максимизировать суммарную ценность груза.
+ */
+
 package task06;
 
 import java.util.ArrayList;
@@ -54,17 +62,14 @@ public class Knapsack {
                 packerList.add(things.get(i));
             }
         }
-
         return packerList;
     }
 
     public int sumCost(List<Thing> packerList) {
         int sum = 0;
-        for (Thing thing : packerList
-                ) {
+        for (Thing thing : packerList) {
             sum += thing.getCost();
         }
-
         return sum;
     }
 

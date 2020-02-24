@@ -48,11 +48,11 @@ public class Thing {
     }
 
     public static void printList(List<Thing> list) {
-        for (Thing thing : list
-        ) {
+        for (Thing thing : list) {
             String thingGenerated = String.format("Thing #%d  with a weight of %d  and a coast of %d",
                     thing.getName(), thing.getWeight(), thing.getCost());
             System.out.println(thingGenerated);
         }
     }
+
 }

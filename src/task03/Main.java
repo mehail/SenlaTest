@@ -27,6 +27,7 @@ public class Main {
 
             final String output = String.format("Sorted sentence: %s\nWords count: %d", sentence, count);
             System.out.println(output);
+
         } catch (StringIndexOutOfBoundsException e) {
             System.out.println("Oops! The sentence to be checked cannot be empty");
         }
